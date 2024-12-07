@@ -20,5 +20,15 @@ namespace DesignPattern
         {
             InitializeComponent();
         }
+
+        private void MVCButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainView = new DesignPatterns.MVC.Views.MainView();
+            var personRepository = new DesignPatterns.Models.PersonRepository();
+
+            _ = new DesignPatterns.MVC.Controllers.MainController(mainView, personRepository);
+
+            mainView.Show();
+        }
     }
 }

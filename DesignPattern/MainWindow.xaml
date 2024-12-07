@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:DesignPattern"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </Window.Resources>
+    
+    <Canvas>
+        <Button x:Name="MVCButton" Content="MVC패턴" Canvas.Left="10" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"
+                Click="MVCButton_Click"/>
+    </Canvas>
+    
 </Window>
